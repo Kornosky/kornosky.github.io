@@ -33,13 +33,14 @@
 
 // Palette.
 	$palette: (
-		bg:							#ffffff,
-		bg-alt:						#f4f4f4,
-		fg:							#646464,
-		fg-bold:					#3c3b3b,
-		fg-light:					#aaaaaa,
-		border:						rgba(160,160,160,0.3),
-		border-bg:					rgba(160,160,160,0.075),
-		border-alt:					rgba(160,160,160,0.65),
-		accent:						#2e59ba
+		bg: #202124,
+		bg-alt: #1A1C1D,
+		fg: #E8EAED,
+		fg-bold: #CDD2D4,
+		fg-light: #AAB0B5,
+		border: rgba(255, 255, 255, 0.3),
+		border-bg: rgba(255, 255, 255, 0.075),
+		border-alt: rgba(255, 255, 255, 0.65),
+		accent: #4285F4
 	);
+

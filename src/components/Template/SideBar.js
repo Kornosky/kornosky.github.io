@@ -12,14 +12,14 @@ const SideBar = () => (
         <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
       </Link>
       <header>
-        <h2>Michael D&apos;Angelo</h2>
-        <p><a href="mailto:michael@mldangelo.com">michael@mldangelo.com</a></p>
+        <h2>Chris Kornosky</h2>
+        <p><a href="mailto:christopher.kornosky@gmail.com">christopher.kornosky@gmail.com</a></p>
       </header>
     </section>
 
     <section className="blurb">
       <h2>About</h2>
-      <p>Hi, I&apos;m Michael. I am a <a href="https://icme.stanford.edu/">Stanford ICME</a> graduate, YC Alumni,
+      <p>Hi, I&apos;m Chris. I am a <a href="https://icme.stanford.edu/">Stanford ICME</a> graduate, YC Alumni,
         and the VP of Engineering at <a href="https://smileidentity.com">Smile Identity</a>. Previously,
         I was the co-founder and CTO of <a href="https://arthena.com">Arthena</a>
         , co-founder of <a href="https://matroid.com">Matroid</a>, and worked at
@@ -34,7 +34,7 @@ const SideBar = () => (
 
     <section id="footer">
       <ContactIcons />
-      <p className="copyright">&copy; Michael D&apos;Angelo <Link to="/">mldangelo.com</Link>.</p>
+      <p className="copyright">&copy; Chris Kornosky <Link to="/">kornosky.site</Link>.</p>
     </section>
   </section>
 );

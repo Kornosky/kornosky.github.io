@@ -5,7 +5,7 @@ const Age = () => {
 
   const tick = () => {
     const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
-    const birthTime = new Date('1990-02-05T09:24:00');
+    const birthTime = new Date('1998-06-22T09:24:00');
     setAge(((Date.now() - birthTime) / divisor).toFixed(11));
   };
 
@@ -25,16 +25,44 @@ const data = [
     value: <Age />,
   },
   {
-    key: 'countries',
-    label: 'Countries visited',
-    value: 53,
-    link:
-      'https://www.google.com/maps/d/embed?mid=1iBBTscqateQ93pWFVfHCUZXoDu8&z=2',
-  },
-  {
     key: 'location',
     label: 'Current city',
-    value: 'New York, NY',
+    value: 'College Station, TX',
+  },
+  {
+    key: 'bornin',
+    label: 'Birth city',
+    value: 'Ashford, Kent, UK',
+  },
+  {
+    key: 'favoritefood',
+    label: 'Favorite food',
+    value: 'Mochi Donuts',
+  },
+  {
+    key: 'numberofcats',
+    label: 'Number of cats',
+    value: 3,
+  },
+  {
+    key: 'numberofhouseplants',
+    label: 'Number of house plants',
+    value: '20+',
+  },
+  {
+    key: 'gamescreated',
+    label: 'Games created',
+    value: 5,
+  },
+  {
+    key: 'currentincome',
+    label: 'Current Income',
+    value: '<ERROR>',
+  },
+  {
+    key: 'favoriteprogramminglanguage',
+    label: 'Favorite programming language',
+    value: 'Python',
   },
 ];
 
