@@ -19,7 +19,7 @@ const SideBar = () => (
 
     <section className="blurb">
       <h2>About</h2>
-      <p>I'm Christopher Kornosky, a Python Developer with expertise in render operations, software development, and visual effects, having led teams and delivered exceptional digital content at<a href="https://www.ingenuitystudios.com/">Ingenuity Studios</a> and Texas A&M University in College Station, TX.
+      <p>I&apos;m Christopher Kornosky, a Python Developer with expertise in render operations, software development, and visual effects, having led teams and delivered exceptional digital content at<a href="https://www.ingenuitystudios.com/">Ingenuity Studios</a> and Texas A&M University in College Station, TX.
       </p>
       <ul className="actions">
         <li>
