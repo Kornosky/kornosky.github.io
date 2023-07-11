@@ -12,7 +12,8 @@ const Index = () => (
         <div className="title">
           <h2><Link to="/">Welcome!</Link></h2>
           <p>
-          I'm an experienced technical leader with a passion for render operations, software development, and visual effects. Throughout my career, I have excelled in fast-paced, deadline-driven environments, delivering consistent results. My expertise spans game development, visual effects, and leading cross-functional teams while providing guidance to emerging talent. I have a continuous thirst for learning, always seeking fresh challenges to drive innovation and push boundaries. I thrive in collaborative, dynamic settings that value creativity, innovation, and a commitment to excellence. I would love to be part of your next project!          </p>
+            I&amp;m an experienced technical leader with a passion for render operations, software development, and visual effects. Throughout my career, I have excelled in fast-paced, deadline-driven environments, delivering consistent results. My expertise spans game development, visual effects, and leading cross-functional teams while providing guidance to emerging talent. I have a continuous thirst for learning, always seeking fresh challenges to drive innovation and push boundaries. I thrive in collaborative, dynamic settings that value creativity, innovation, and a commitment to excellence. I would love to be part of your next project!
+          </p>
         </div>
       </header>
       <p> Welcome to my website. Please feel free to read more <Link to="/about">about me</Link>,
