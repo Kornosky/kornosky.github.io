@@ -1,46 +1,56 @@
 // Misc.
-	$misc: (
-		z-index-base:				10000
-	);
+$misc: (
+  z-index-base: 10000,
+);
 
 // Duration.
-	$duration: (
-		menu:						0.5s,
-		transition:					0.2s
-	);
+$duration: (
+  menu: 0.5s,
+  transition: 0.2s,
+);
 
 // Size.
-	$size: (
-		element-height:				2.75em,
-		element-margin:				2em,
-		section-spacing:			3em,
-		section-spacing-small:		1.5em,
-		menu:						25em
-	);
+$size: (
+  element-height: 2.75em,
+  element-margin: 2em,
+  section-spacing: 3em,
+  section-spacing-small: 1.5em,
+  menu: 25em,
+);
 
 // Font.
-	$font: (
-		family:						('Source Sans Pro', Helvetica, sans-serif),
-		family-fixed:				('Courier New', monospace),
-		family-heading:				('Raleway', Helvetica, sans-serif),
-		weight:						400,
-		weight-bold:				700,
-		weight-heading:				400,
-		weight-heading-bold:		800,
-		weight-heading-extrabold:	900,
-		kerning-heading:			0.25em
-	);
+$font: (
+  family: (
+    "Source Sans Pro",
+    Helvetica,
+    sans-serif,
+  ),
+  family-fixed: (
+    "Courier New",
+    monospace,
+  ),
+  family-heading: (
+    "Raleway",
+    Helvetica,
+    sans-serif,
+  ),
+  weight: 400,
+  weight-bold: 700,
+  weight-heading: 400,
+  weight-heading-bold: 800,
+  weight-heading-extrabold: 900,
+  kerning-heading: 0.25em,
+);
 
 // Palette.
-	$palette: (
-		bg: #202124,
-		bg-alt: #1A1C1D,
-		fg: #E8EAED,
-		fg-bold: #CDD2D4,
-		fg-light: #AAB0B5,
-		border: rgba(255, 255, 255, 0.3),
-		border-bg: rgba(255, 255, 255, 0.075),
-		border-alt: rgba(255, 255, 255, 0.65),
-		accent: #4285F4
-	);
-
+$palette: (
+  bg: #202124,
+  bg-alt: #1a1c1d,
+  fg: #e8eaed,
+  fg-bold: #cdd2d4,
+  fg-light: #aab0b5,
+  border: rgba(255, 255, 255, 0.3),
+  border-bg: rgba(255, 255, 255, 0.075),
+  border-alt: rgba(255, 255, 255, 0.65),
+  accent: #4285f4,
+);

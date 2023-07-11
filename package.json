@@ -17,7 +17,8 @@
     "start": "react-scripts start",
     "lint": "eslint $(git ls-files '*.js')",
     "test": "npx jest",
-    "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js"
+    "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
+    "prettier": "prettier --write ./src"
   },
   "dependencies": {
     "@fortawesome/fontawesome-common-types": "^6.4.0",
@@ -50,6 +51,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "^7.32.2",
+    "prettier": "3.0.0",
     "react-snap": "^1.23.0",
     "rimraf": "^5.0.1",
     "sass": "^1.63.4",
