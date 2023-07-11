@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Degree from "./Education/Degree";
+import Degree from './Education/Degree';
 
 const Education = ({ data }) => (
   <div className="education">

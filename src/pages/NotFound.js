@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const PageNotFound = () => (
   <HelmetProvider>

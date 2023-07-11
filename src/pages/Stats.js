@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Main from "../layouts/Main";
+import Main from '../layouts/Main';
 
-import Personal from "../components/Stats/Personal";
+import Personal from '../components/Stats/Personal';
 
 const Stats = () => (
   <Main title="Stats" description="Some statistics about Chris Kornosky">

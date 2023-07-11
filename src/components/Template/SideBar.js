@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import ContactIcons from "../Contact/ContactIcons";
+import ContactIcons from '../Contact/ContactIcons';
 
 const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
 
@@ -32,7 +32,7 @@ const SideBar = () => (
       </p>
       <ul className="actions">
         <li>
-          {!window.location.pathname.includes("/resume") ? (
+          {!window.location.pathname.includes('/resume') ? (
             <Link to="/resume" className="button">
               Learn More
             </Link>

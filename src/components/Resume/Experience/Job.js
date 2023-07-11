@@ -1,10 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import dayjs from "dayjs";
-import Markdown from "markdown-to-jsx";
+import React from 'react';
+import PropTypes from 'prop-types';
+import dayjs from 'dayjs';
+import Markdown from 'markdown-to-jsx';
 
 const Job = ({
-  data: { name, position, url, startDate, endDate, summary, highlights },
+  data: {
+    name, position, url, startDate, endDate, summary, highlights,
+  },
 }) => (
   <article className="jobs-container">
     <header>
@@ -12,9 +14,9 @@ const Job = ({
         <a href={url}>{name}</a> - {position}
       </h4>
       <p className="daterange">
-        {" "}
-        {dayjs(startDate).format("MMMM YYYY")} -{" "}
-        {endDate ? dayjs(endDate).format("MMMM YYYY") : "PRESENT"}
+        {' '}
+        {dayjs(startDate).format('MMMM YYYY')} -{' '}
+        {endDate ? dayjs(endDate).format('MMMM YYYY') : 'PRESENT'}
       </p>
     </header>
     {summary ? (
@@ -23,7 +25,7 @@ const Job = ({
           overrides: {
             p: {
               props: {
-                className: "summary",
+                className: 'summary',
               },
             },
           },

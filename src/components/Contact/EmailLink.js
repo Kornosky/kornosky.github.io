@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 // Validates the first half of an email address.
 const validateText = (text) => {
@@ -10,21 +10,21 @@ const validateText = (text) => {
 };
 
 const messages = [
-  "hi",
-  "hello",
-  "hola",
-  "you-can-email-me-at-literally-anything! Really",
-  "well, not anything. But most things",
-  "like-this",
-  "or-this",
-  "but not this :(  ",
-  "you.can.also.email.me.with.specific.topics.like",
-  "just-saying-hi",
-  "please-work-for-us",
-  "help",
-  "admin",
-  "or-I-really-like-your-website",
-  "thanks",
+  'hi',
+  'hello',
+  'hola',
+  'you-can-email-me-at-literally-anything! Really',
+  'well, not anything. But most things',
+  'like-this',
+  'or-this',
+  'but not this :(  ',
+  'you.can.also.email.me.with.specific.topics.like',
+  'just-saying-hi',
+  'please-work-for-us',
+  'help',
+  'admin',
+  'or-I-really-like-your-website',
+  'thanks',
 ];
 
 const useInterval = (callback, delay) => {
@@ -81,11 +81,11 @@ const EmailLink = ({ loopMessage }) => {
   return (
     <div
       className="inline-container"
-      style={validateText(message) ? {} : { color: "red" }}
+      style={validateText(message) ? {} : { color: 'red' }}
       onMouseEnter={() => setIsActive(false)}
       onMouseLeave={() => idx < messages.length && setIsActive(true)}
     >
-      <a href={validateText(message) ? `mailto:${message}@kornosky.site` : ""}>
+      <a href={validateText(message) ? `mailto:${message}@kornosky.site` : ''}>
         <span>{message}</span>
         <span>@kornosky.site</span>
       </a>

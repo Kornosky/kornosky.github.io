@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Job from "./Experience/Job";
+import Job from './Experience/Job';
 
 const Experience = ({ data }) => (
   <div className="experience">
