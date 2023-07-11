@@ -61,19 +61,6 @@ describe('renders the app', () => {
     expect(textMock).toHaveBeenCalledTimes(1);
   });
 
-  it('can navigate to /resume', async () => {
-    expect.assertions(3);
-    const contactLink = document.querySelector(
-      '#header > nav > ul > li:nth-child(2) > a',
-    );
-    expect(contactLink).toBeInTheDocument();
-    await act(async () => {
-      await contactLink.click();
-    });
-    expect(document.title).toContain('Resume |');
-    expect(window.location.pathname).toBe('/resume');
-  });
-
   it('can navigate to /projects', async () => {
     expect.assertions(3);
     const contactLink = document.querySelector(
