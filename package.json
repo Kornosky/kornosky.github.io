@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kornosky/personal-site.git"
+    "url": "https://github.com/Kornosky/kornosky.github.io.git"
   },
   "engines": {
     "node": ">=14.x"
