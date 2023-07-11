@@ -5,17 +5,14 @@ import Main from '../layouts/Main';
 
 const Index = () => (
   <Main
-    description={"Chris Kornosky's personal website. New York based Stanford ICME graduate, "
-    + 'VP of Engineering at Smile Identity, co-founder of Arthena and Matroid, and YC Alumni.'}
+    description={"Chris Kornosky's personal website."}
   >
     <article className="post" id="index">
       <header>
         <div className="title">
-          <h2><Link to="/">About this site</Link></h2>
+          <h2><Link to="/">Welcome!</Link></h2>
           <p>
-            A beautiful, responsive, statically-generated,
-            react application written with modern Javascript.
-          </p>
+          I'm an experienced technical leader with a passion for render operations, software development, and visual effects. Throughout my career, I have excelled in fast-paced, deadline-driven environments, delivering consistent results. My expertise spans game development, visual effects, and leading cross-functional teams while providing guidance to emerging talent. I have a continuous thirst for learning, always seeking fresh challenges to drive innovation and push boundaries. I thrive in collaborative, dynamic settings that value creativity, innovation, and a commitment to excellence. I would love to be part of your next project!          </p>
         </div>
       </header>
       <p> Welcome to my website. Please feel free to read more <Link to="/about">about me</Link>,
@@ -25,7 +22,6 @@ const Index = () => (
         view <Link to="/stats">site statistics</Link>, {' '}
         or <Link to="/contact">contact</Link> me.
       </p>
-      <p> Source available <a href="https://github.com/kornosky/kornosky.github.io">here</a>.</p>
     </article>
   </Main>
 );
