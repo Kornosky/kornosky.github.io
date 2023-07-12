@@ -50,6 +50,11 @@ const data = [
     value: '20+',
   },
   {
+    key: 'isthisastat',
+    label: 'Is this even a stat',
+    value: 'It is now',
+  },
+  {
     key: 'gamescreated',
     label: 'Games created',
     value: 5,

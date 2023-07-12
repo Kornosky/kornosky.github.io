@@ -7,38 +7,56 @@
 /* Mini Post */
 .cell-container {
   position: relative;
+}
 
-  .description {
-    position: absolute;
-    padding: 0;
-    bottom: 0;
-    border-top: solid 1px _palette(border);
+.description {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  border-top: solid 1px _palette(border);
+  display: flex;
+  align-items: center; /* Center vertically within the container */
 
-    p {
-      font-size: 0.9rem;
-      margin: 0;
-      padding: 1.25em;
-      background-color: rgba(255, 255, 255, 0.7);
-      color: #3c3b3b;
-      font-family: "Raleway", Helvetica, sans-serif;
-      z-index: 1000;
-      transition: all 0.1s;
-      -webkit-transition: all 0.1s ease-in-out;
-    }
-
-    p:hover {
-      background-color: rgba(255, 255, 255, 0.9);
-    }
+  p {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 1.25em;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #000000;
+    font-family: "Raleway", Helvetica, sans-serif;
+    z-index: 1000;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s ease-in-out;
+    width: 100%; /* Add this property to stretch to full width */
+    text-align: center; /* Center the text content */
   }
 
-  @media (max-width: 480px) {
-    .description {
-      position: inherit;
-      padding: 0;
-      bottom: inherit;
-    }
+  p:hover {
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
+
+@media (max-width: 480px) {
+  .description {
+    position: static;
+    padding: 0;
+    border-top: none;
+    display: block;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .description {
+    position: static;
+    padding: 0;
+    border-top: none;
+    display: block;
+  }
+}
+
 
 .mini-post {
   @include vendor("display", "flex");

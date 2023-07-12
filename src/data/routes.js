@@ -18,7 +18,7 @@ const routes = [
   },
   {
     label: 'Blog',
-    path: '/stats',
+    path: '/blog',
   },
   {
     label: 'Contact',
