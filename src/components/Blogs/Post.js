@@ -19,6 +19,7 @@ const PostPreview = ({ data }) => {
           const response = await axios.get(data.post);
           setLoadedPost(response.data);
         } catch (error) {
+          setLoadedPost(null);
           console.error('Error loading markdown:', error);
         }
       }
