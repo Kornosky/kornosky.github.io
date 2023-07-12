@@ -64,7 +64,7 @@ describe('renders the app', () => {
   it('can navigate to /projects', async () => {
     expect.assertions(3);
     const contactLink = document.querySelector(
-      '#header > nav > ul > li:nth-child(3) > a',
+      '#header > nav > ul > li:nth-child(2) > a',
     );
     expect(contactLink).toBeInTheDocument();
     await act(async () => {
