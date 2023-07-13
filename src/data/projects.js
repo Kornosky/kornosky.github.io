@@ -4,7 +4,7 @@ const data = [
     title: 'Lucis Lemonade Stand',
     link: 'https://undeadknight11.itch.io/lucis-lemonade-stand',
     subtitle: 'A Short Unreal Engine Experience',
-    image: '/images/projects/lucislemonadestand.gif',
+    image: '/images/projects/PhysicalMemory.png',
     date: '2021-03-28',
     desc:
       'Taking place in the underworld, a mysterious merchant provides you with a business to run, a lemonade stand! As you serve the denizens of this hellish suburbia the unbearable conditions of the environment start becoming a bit more bearable. Your goal, if you so choose to accept, is to earn enough money to upgrade your business from just a stand to an entire restaurant. ',
@@ -13,7 +13,7 @@ const data = [
     title: 'Beleaguered Woods',
     link: 'https://undeadknight11.itch.io/beleagueredwoods',
     subtitle: 'A Short Unreal Engine Experience',
-    image: '/images/projects/beleagueredwoods.gif',
+    image: '/images/projects/PhysicalMemory.png',
     date: '2020-12-02',
     desc:
       'Traverse the beleaguered woods to repair the fountain protected by the Seeker. Its destruction has lead to the release of angry spirits that must be avoided at all costs, they sneak from bush to bush, leaving a trail of ectoplasm. It\'s up to you to restore order to the forest.',
@@ -22,7 +22,7 @@ const data = [
     title: 'Panacea',
     link: 'https://undeadknight11.itch.io/panacea',
     subtitle: 'A Short Unreal Engine Experience',
-    image: '/images/projects/panacea.gif',
+    image: '/images/projects/PhysicalMemory.png',
     date: '2020-09-30',
     desc:
       'A turn-based RPG following three professionals as they traverse the virus-ridden island in search of the source of malice.',
