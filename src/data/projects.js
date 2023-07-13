@@ -4,7 +4,7 @@ const data = [
     title: 'Lucis Lemonade Stand',
     link: 'https://undeadknight11.itch.io/lucis-lemonade-stand',
     subtitle: 'A Short Unreal Engine Experience',
-    image: '/images/projects/PhysicalMemory.png',
+    image: '/images/projects/lucislemonadestand.gif',
     date: '2021-03-28',
     desc:
       'Taking place in the underworld, a mysterious merchant provides you with a business to run, a lemonade stand! As you serve the denizens of this hellish suburbia the unbearable conditions of the environment start becoming a bit more bearable. Your goal, if you so choose to accept, is to earn enough money to upgrade your business from just a stand to an entire restaurant. ',
