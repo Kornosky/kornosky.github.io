@@ -22,7 +22,7 @@ const data = [
     title: 'Panacea',
     link: 'https://undeadknight11.itch.io/panacea',
     subtitle: 'A Short Unreal Engine Experience',
-    image: '/images/projects/PhysicalMemory.png',
+    image: '/images/projects/panacea.gif',
     date: '2020-09-30',
     desc:
       'A turn-based RPG following three professionals as they traverse the virus-ridden island in search of the source of malice.',
