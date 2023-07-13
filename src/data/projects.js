@@ -13,7 +13,7 @@ const data = [
     title: 'Beleaguered Woods',
     link: 'https://undeadknight11.itch.io/beleagueredwoods',
     subtitle: 'A Short Unreal Engine Experience',
-    image: '/images/projects/PhysicalMemory.png',
+    image: '/images/projects/beleagueredwoods.gif',
     date: '2020-12-02',
     desc:
       'Traverse the beleaguered woods to repair the fountain protected by the Seeker. Its destruction has lead to the release of angry spirits that must be avoided at all costs, they sneak from bush to bush, leaving a trail of ectoplasm. It\'s up to you to restore order to the forest.',
