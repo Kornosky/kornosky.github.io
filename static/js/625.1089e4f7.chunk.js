@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkornosky_github_io=self.webpackChunkkornosky_github_io||[]).push([[625],{9625:function(o,s,t){o.exports=t.p+"static/media/about.c0b7272d9c5210075f9e.md"}}]);
