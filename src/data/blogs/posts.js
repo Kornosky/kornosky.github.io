@@ -3,13 +3,13 @@ const data = [
     title: 'Scripting with the Deadline Thinkbox API',
     post: '2023-07-05-Scripting-With-Thinkbox-Deadline-API.md',
     subtitle: 'raycaster-simplified!',
-    image: 'ReflectionScene_Loop.gif',
+    image: 'deadline.jpg',
     desc:
         'This is going to be a blog post about all the caveats, limitations, and uses of the deadline api.',
   },
   {
     title: 'C++ Graphics Raycaster Simplified',
-    post: '2023-07-05-Scripting-With-Thinkbox-Deadline-API.md',
+    post: '2021-03-24-raycaster-simplified.md',
     subtitle: 'raycaster-simplified!',
     image: 'ReflectionScene_Loop.gif',
     desc:
