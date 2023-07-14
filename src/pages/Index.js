@@ -29,6 +29,13 @@ const Index = () => (
         push boundaries. I thrive in collaborative, dynamic settings that
         value creativity, innovation, and self-improvement.
       </p>
+      <div className="logos">
+        <img className="logo" src="https://www.shotgridsoftware.com/resources/images/theme/logo-autodesk-shotgrid.svg" alt="Shotgrid Logo" />
+        <img className="logo" src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python Logo" />
+        <img className="logo" src="https://docs.thinkboxsoftware.com/products/deadline/10.1/1_User%20Manual/_static/Product_Button_Deadline.png" alt="Thinkbox Deadline Logo" />
+        <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/RenderMan_Logo.svg/1200px-RenderMan_Logo.svg.png" alt="Renderman Logo" />
+        <img className="logo" src="logos/Houdini_black_color.png" alt="Houdini Logo" />
+      </div>
     </article>
   </Main>
 );

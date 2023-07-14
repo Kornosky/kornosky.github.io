@@ -56,6 +56,20 @@
 @import "components/hamburger";
 @import "components/markdown";
 
+// Make this a component
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo {
+  flex: 0 0 auto;
+  max-width: 100%;
+  height: auto;
+  margin-right: 10px;
+}
+
 // Layout.
 
 @import "layout/header";

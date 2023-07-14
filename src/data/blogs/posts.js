@@ -1,7 +1,7 @@
 const data = [
   {
     title: 'Scripting with the Deadline Thinkbox API',
-    post: '2023-07-05-Scripting-With-Thinkbox-Deadline-API.md',
+    post: '2023-07-05-Scripting-With-Thinkbox-Deadline-API',
     subtitle: 'raycaster-simplified!',
     image: 'deadline.jpg',
     desc:
@@ -9,7 +9,7 @@ const data = [
   },
   {
     title: 'C++ Graphics Raycaster Simplified',
-    post: '2021-03-24-raycaster-simplified.md',
+    post: '2021-03-24-raycaster-simplified',
     subtitle: 'raycaster-simplified!',
     image: 'ReflectionScene_Loop.gif',
     desc:
@@ -22,7 +22,7 @@ const data = [
   const match = post.match(/^(\d{4}-\d{2}-\d{2})-/);
   const date = match ? match[1] : '1998-06-22';
   return {
-    ...rest, post: `blogs/${item.post}`, image: `/images/blog/${item.image}`, date,
+    ...rest, post: `${item.post}`, image: `/images/blog/${item.image}`, date,
   };
 });
 

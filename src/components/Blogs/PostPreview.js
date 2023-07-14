@@ -2,27 +2,18 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 import axios from 'axios';
-import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router-dom';
 
 const PostPreview = ({ data }) => {
   // eslint-disable-next-line no-unused-vars
-  const [loadedPost, setLoadedPost] = useState(null);
-  const handleClick = async (event) => {
-    const targetElement = event.target;
+  const [loadedPost, setLoadedPost] = useState('');
 
-    if (targetElement.tagName !== 'A') {
-      if (loadedPost) {
-        // If the post is already loaded, remove it
-        setLoadedPost(null);
-      } else {
-        try {
-          const response = await axios.get(data.post);
-          setLoadedPost(response.data);
-        } catch (error) {
-          setLoadedPost(null);
-          console.error('Error loading markdown:', error);
-        }
-      }
+  const handleClick = async () => {
+    try {
+      const response = await axios.get(`${data.post}.md`);
+      setLoadedPost(response.data);
+    } catch (error) {
+      console.error('Error loading markdown:', error);
     }
   };
 
@@ -32,21 +23,20 @@ const PostPreview = ({ data }) => {
         <article className="mini-post">
           <header>
             <h3>
-              <a href={data.link}>{data.title}</a>
+              <Link to={`/blog/${data.post}`}>{data.title}</Link>
             </h3>
             <time className="published">
               {dayjs(data.date).format('MMMM, YYYY')}
             </time>
           </header>
-          <a href={data.link} className="image">
+          <Link to={`/blog/${data.post}`} className="image">
             <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} />
-          </a>
+          </Link>
           <div className="description">
             <p>{data.desc}</p>
           </div>
         </article>
       </div>
-      {loadedPost && <ReactMarkdown>{loadedPost}</ReactMarkdown>}
     </div>
   );
 };
