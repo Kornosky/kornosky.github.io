@@ -6,12 +6,14 @@
   filter: grayscale(90%);
 }
 
+$animation-time: 0.4s; // Set time of the animation
+
 .trademarklogo {
   flex: 0 0 auto;
   max-width: 25%;
   margin-right: 20px;
   animation: floatAnimation 4s infinite alternate ease-in-out;
-  transition: transform 0.3s ease;
+  transition: transform $animation-time ease;
 }
 
 .trademarklogo:hover {
@@ -34,20 +36,9 @@ $logo-count: 8; // Set the total number of logos
 
 @for $i from 1 through $logo-count {
   .trademarklogo:nth-child(#{$i}) {
-    animation-delay: 0 + ($i * 0.2s); // Apply animation delay based on index
+    animation-delay: calc($i * $animation-time); // Apply animation delay based on index
   }
 }
 
 /* Add more nth-child selectors with different delays for additional logos */
 
-@keyframes floatAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}

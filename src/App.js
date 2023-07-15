@@ -14,7 +14,6 @@ const Index = lazy(() => import('./pages/Index'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Blog = lazy(() => import('./pages/Blog'));
-const Stats = lazy(() => import('./pages/Stats'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 
 const App = () => (
@@ -26,7 +25,6 @@ const App = () => (
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} /> {/* New route for individual blog posts */}
-        <Route path="/stats" element={<Stats />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

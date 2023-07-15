@@ -26,7 +26,7 @@ const Index = () => (
           </h2>
           <p>
             <Link to="/about">Learn about me</Link>, or you can check out {' '}
-            <Link to="/stats">bite-sized facts about me</Link>, or{' '}
+            <Link to="/blog">my ramblings</Link>, or{' '}
             <Link to="/contact">contact</Link> me.
           </p>
         </div>
