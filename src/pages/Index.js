@@ -1,10 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import Main from '../layouts/Main';
 
 const Index = () => (
   <Main description={"Chris Kornosky's personal website."}>
+    <Helmet>
+      <title>Welcome to Chris Kornosky&apos;s Website</title>
+      <meta name="description" content="Enter your desired description here" />
+      <meta property="og:title" content="Welcome to Chris Kornosky's Website" />
+      <meta
+        property="og:description"
+        content="Enter your desired description here"
+      />
+      <meta property="og:image" content="helment-image.png" />
+      <meta property="og:url" content="kornosky.what" />
+    </Helmet>
     <article className="post" id="index">
       <header>
         <div className="title">
