@@ -55,21 +55,7 @@
 @import "components/table";
 @import "components/hamburger";
 @import "components/markdown";
-
-// Make this a component
-.trademarklogos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; /* Added line */
-  filter: grayscale(90%);
-}
-
-.trademarklogo {
-  flex: 0 0 auto;
-  max-width: 30%;
-  margin-right: 20px;
-}
+@import "components/trademarkedlogos";
 
 // Layout.
 

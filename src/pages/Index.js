@@ -43,13 +43,17 @@ const Index = () => (
         value creativity, innovation, and self-improvement.
       </p>
       <h3>
-        Recognizable programs that I work with
+        Applications and frameworks that I work with
       </h3>
       <div className="trademarklogos">
         <img className="trademarklogo" src="https://www.shotgridsoftware.com/resources/images/theme/logo-autodesk-shotgrid.svg" alt="Shotgrid Logo" />
         <img className="trademarklogo" src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python Logo" />
-        <img className="trademarklogo" src="https://docs.thinkboxsoftware.com/products/deadline/10.1/1_User%20Manual/_static/Product_Button_Deadline.png" alt="Thinkbox Deadline Logo" />
         <img className="trademarklogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/RenderMan_Logo.svg/1200px-RenderMan_Logo.svg.png" alt="Renderman Logo" />
+        <img className="trademarklogo" src="logos/foundry-nuke.svg" alt="Foundry Nuke Logo" />
+        <img className="trademarklogo" src="https://www.awsthinkbox.com/dist/bb7940d16676876966e0c962e7e91f19.svg" alt="Foundry Nuke Logo" />
+        <img className="trademarklogo" src="logos/unity.svg" alt="Unity Logo" />
+        <img className="trademarklogo" src="https://godotengine.org/assets/logo_dark.svg" alt="Godot Logo" />
+        <img className="trademarklogo" src="https://cdn2.unrealengine.com/ue-logo-stacked-unreal-engine-w-677x545-fac11de0943f.png" alt="Unreal Engine Logo" />
         <img className="trademarklogo" src="logos/Houdini_black_color.png" alt="Houdini Logo" />
       </div>
     </article>
