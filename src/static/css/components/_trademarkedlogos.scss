@@ -16,8 +16,9 @@ $animation-time: 0.4s; // Set time of the animation
   transition: transform $animation-time ease;
 }
 
-.trademarklogo:hover {
-  transform: scale(1.2);
+// Not friggin working
+#trademarklogos img:hover {
+  filter: grayscale(0%);
 }
 
 @keyframes floatAnimation {
@@ -32,7 +33,7 @@ $animation-time: 0.4s; // Set time of the animation
   }
 }
 
-$logo-count: 8; // Set the total number of logos
+$logo-count: 9; // Set the total number of logos
 
 @for $i from 1 through $logo-count {
   .trademarklogo:nth-child(#{$i}) {

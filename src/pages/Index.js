@@ -55,6 +55,7 @@ const Index = () => (
         <img className="trademarklogo" src="https://godotengine.org/assets/logo_dark.svg" alt="Godot Logo" />
         <img className="trademarklogo" src="https://cdn2.unrealengine.com/ue-logo-stacked-unreal-engine-w-677x545-fac11de0943f.png" alt="Unreal Engine Logo" />
         <img className="trademarklogo" src="logos/Houdini_black_color.png" alt="Houdini Logo" />
+        <img className="trademarklogo" src="logos/mongodb.svg" alt="MongoDB Logo" />
       </div>
     </article>
   </Main>
