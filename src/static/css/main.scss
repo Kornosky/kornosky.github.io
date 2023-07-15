@@ -57,17 +57,18 @@
 @import "components/markdown";
 
 // Make this a component
-.logos {
+.trademarklogos {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center; /* Added line */
+  filter: grayscale(90%);
 }
 
-.logo {
+.trademarklogo {
   flex: 0 0 auto;
-  max-width: 100%;
-  height: auto;
-  margin-right: 10px;
+  max-width: 30%;
+  margin-right: 20px;
 }
 
 // Layout.

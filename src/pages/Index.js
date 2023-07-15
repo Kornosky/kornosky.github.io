@@ -12,10 +12,11 @@ const Index = () => (
       <meta property="og:title" content="Welcome to Chris Kornosky's Website" />
       <meta
         property="og:description"
-        content="Enter your desired description here"
+        content="Chris Kornosky's personal website."
       />
-      <meta property="og:image" content="helment-image.png" />
-      <meta property="og:url" content="kornosky.what" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="helmet.jpg" />
+      <meta property="og:url" content="https://www.kornosky.site/" />
     </Helmet>
     <article className="post" id="index">
       <header>
@@ -41,12 +42,15 @@ const Index = () => (
         push boundaries. I thrive in collaborative, dynamic settings that
         value creativity, innovation, and self-improvement.
       </p>
-      <div className="logos">
-        <img className="logo" src="https://www.shotgridsoftware.com/resources/images/theme/logo-autodesk-shotgrid.svg" alt="Shotgrid Logo" />
-        <img className="logo" src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python Logo" />
-        <img className="logo" src="https://docs.thinkboxsoftware.com/products/deadline/10.1/1_User%20Manual/_static/Product_Button_Deadline.png" alt="Thinkbox Deadline Logo" />
-        <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/RenderMan_Logo.svg/1200px-RenderMan_Logo.svg.png" alt="Renderman Logo" />
-        <img className="logo" src="logos/Houdini_black_color.png" alt="Houdini Logo" />
+      <h3>
+        Recognizable programs that I work with
+      </h3>
+      <div className="trademarklogos">
+        <img className="trademarklogo" src="https://www.shotgridsoftware.com/resources/images/theme/logo-autodesk-shotgrid.svg" alt="Shotgrid Logo" />
+        <img className="trademarklogo" src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python Logo" />
+        <img className="trademarklogo" src="https://docs.thinkboxsoftware.com/products/deadline/10.1/1_User%20Manual/_static/Product_Button_Deadline.png" alt="Thinkbox Deadline Logo" />
+        <img className="trademarklogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/RenderMan_Logo.svg/1200px-RenderMan_Logo.svg.png" alt="Renderman Logo" />
+        <img className="trademarklogo" src="logos/Houdini_black_color.png" alt="Houdini Logo" />
       </div>
     </article>
   </Main>
