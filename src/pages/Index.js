@@ -25,7 +25,8 @@ const Index = () => (
             <Link to="/">Welcome!</Link>
           </h2>
           <p>
-            <Link to="/about">Learn about me</Link>, or you can check out {' '}
+            <Link to="/about">Learn about me</Link>, browse my {' '}
+            <Link to="/projects">projects</Link>, or you can check out {' '}
             <Link to="/blog">my ramblings</Link>, or{' '}
             <Link to="/contact">contact</Link> me.
           </p>
@@ -37,7 +38,9 @@ const Index = () => (
         in fast-paced, deadline-driven environments,
         delivering consistent results. My expertise spans game development,
         visual effects, and leading cross-functional teams while providing
-        guidance to emerging talent. I have a continuous thirst for
+        guidance to emerging talent.
+      </p>
+      <p>I have a continuous thirst for
         learning, always seeking fresh challenges to drive innovation and
         push boundaries. I thrive in collaborative, dynamic settings that
         value creativity, innovation, and self-improvement.
