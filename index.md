@@ -1,9 +1,11 @@
 ---
 layout: home
 author_profile: true
-title: "Hi, I'm Christopher Kornosky"
+title: "Hi, I'm Chris Kornosky"
 ---
 
-Game Engineer | Game Designer | Technical Artist — passionate about creating something new and unique.
+Pipeline Technical Director at **Ingenuity Studios** — building and maintaining the tools, pipelines, and infrastructure that keep VFX production running.
 
-Feel free to [contact me](mailto:christopher.kornosky@gmail.com) or browse my work above.
+I specialize in render farm operations, pipeline automation, and DevOps for creative studios. Currently modernizing deployment workflows with Rez, Ruff, and mypy.
+
+[View my full background](/about/){: .btn .btn--primary} &nbsp; [Get in touch](mailto:christopher.kornosky@gmail.com){: .btn .btn--inverse}

@@ -5,25 +5,31 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "dark"
 locale: "en-US"
-title: "Christopher Kornosky"
-name: "Christopher Kornosky"
-description: "Game Engineer | Game Designer | Technical Artist"
+title: "Chris Kornosky"
+name: "Chris Kornosky"
+description: "Pipeline Technical Director · VFX & Game Development"
 url: "https://kornosky.github.io"
 
 author:
-  name: "Christopher Kornosky"
-  bio: "Passionate game developer and artist striving to create something new and unique."
-  location: "Texas"
+  name: "Chris Kornosky"
+  bio: "Pipeline TD at Ingenuity Studios. DevOps, Python, Houdini, and render infrastructure for VFX production."
+  location: "Austin, Texas"
   avatar: "/assets/img/avatar-icon.png"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:christopher.kornosky@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/christopherkornosky/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Kornosky"
+    - label: "Portfolio"
+      icon: "fas fa-fw fa-globe"
+      url: "https://www.kornosky.site/"
 
 defaults:
   - scope:
