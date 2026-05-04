@@ -5,7 +5,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "dark"
 locale: "en-US"
 title: "Christopher Kornosky"
 name: "Christopher Kornosky"
@@ -24,6 +24,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Kornosky"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/christopherkornosky/"
 
 defaults:
   - scope:
