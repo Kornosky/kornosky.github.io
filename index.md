@@ -1,2 +1,9 @@
+---
+layout: home
+author_profile: true
+title: "Hi, I'm Christopher Kornosky"
+---
 
-INFO: Type "CLIP /?" for usage.
+Game Engineer | Game Designer | Technical Artist — passionate about creating something new and unique.
+
+Feel free to [contact me](mailto:christopher.kornosky@gmail.com) or browse my work above.

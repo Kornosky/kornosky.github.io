@@ -1,2 +1,34 @@
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
 
-INFO: Type "CLIP /?" for usage.
+minimal_mistakes_skin: "default"
+locale: "en-US"
+title: "Christopher Kornosky"
+name: "Christopher Kornosky"
+description: "Game Engineer | Game Designer | Technical Artist"
+url: "https://kornosky.github.io"
+
+author:
+  name: "Christopher Kornosky"
+  bio: "Passionate game developer and artist striving to create something new and unique."
+  location: "Texas"
+  avatar: "/assets/img/avatar-icon.png"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:christopher.kornosky@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Kornosky"
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
