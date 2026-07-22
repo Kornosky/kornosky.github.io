@@ -188,12 +188,21 @@ footer .theme-by {
 
 /* --- Hero -------------------------------------------------------------- */
 
+/* Glow gradients use several eased stops instead of a single 2-stop fade:
+   large soft radials on near-black band visibly in 8-bit color, and the
+   extra stops (plus the noise layer below) dither the steps away. */
 .ck-hero {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 55% 60% at 18% 8%, rgba(88, 104, 196, 0.22), transparent 60%),
-    radial-gradient(ellipse 45% 55% at 85% 90%, rgba(185, 154, 95, 0.12), transparent 60%),
+    radial-gradient(ellipse 55% 60% at 18% 8%,
+      rgba(88, 104, 196, 0.2) 0%, rgba(88, 104, 196, 0.11) 25%,
+      rgba(88, 104, 196, 0.05) 42%, rgba(88, 104, 196, 0.02) 55%,
+      transparent 70%),
+    radial-gradient(ellipse 45% 55% at 85% 90%,
+      rgba(185, 154, 95, 0.09) 0%, rgba(185, 154, 95, 0.05) 25%,
+      rgba(185, 154, 95, 0.025) 42%, rgba(185, 154, 95, 0.01) 55%,
+      transparent 70%),
     linear-gradient(180deg, var(--ck-bg-dark) 0%, var(--ck-bg-dark-2) 100%);
   color: var(--ck-ink-inverse);
   padding: 9.5rem 1.5rem 7rem;
@@ -232,6 +241,18 @@ footer .theme-by {
   line-height: 1.05;
   color: #ffffff;
   margin: 0 0 1.25rem;
+}
+
+.ck-rotate {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: bottom;
+  transition: width 0.45s ease;
+}
+
+.ck-rotate-word {
+  display: inline-block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .ck-hero h1 .ck-accent {
@@ -458,6 +479,7 @@ a.ck-project:hover .ck-arrow {
 .ck-lang-csharp { --ck-lang-col: #8b5cf6; }
 .ck-lang-js     { --ck-lang-col: #eab308; }
 .ck-lang-cpp    { --ck-lang-col: #ec4899; }
+.ck-lang-game   { --ck-lang-col: #c2a468; }
 
 .ck-project h3 {
   font-size: 1.2rem;
@@ -502,7 +524,10 @@ a.ck-project:hover .ck-arrow {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 60% 80% at 50% 110%, rgba(88, 104, 196, 0.22), transparent 65%),
+    radial-gradient(ellipse 60% 80% at 50% 110%,
+      rgba(88, 104, 196, 0.2) 0%, rgba(88, 104, 196, 0.11) 25%,
+      rgba(88, 104, 196, 0.05) 45%, rgba(88, 104, 196, 0.02) 57%,
+      transparent 70%),
     linear-gradient(180deg, var(--ck-bg-dark-2) 0%, var(--ck-bg-dark) 100%);
   color: var(--ck-ink-inverse);
   text-align: center;
@@ -524,6 +549,19 @@ a.ck-project:hover .ck-arrow {
   position: relative;
 }
 
+/* Fine monochrome noise over the glow sections: dithers away the color
+   banding the big radials leave on 8-bit displays. */
+.ck-hero::after,
+.ck-contact::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.045;
+  pointer-events: none;
+}
+
 .ck-contact .ck-section-title {
   color: #ffffff;
 }
@@ -541,42 +579,23 @@ a.ck-project:hover .ck-arrow {
 
 /* --- Lantern cursor glow ----------------------------------------------- */
 
+/* Opacity (fade-in and candle flicker) is driven entirely from lantern.js
+   so it works regardless of the OS reduced-motion setting, which silently
+   disabled the old CSS keyframe flicker. */
 #ck-lantern {
   position: fixed;
   inset: 0;
   z-index: 2000;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.6s ease;
   background:
     radial-gradient(200px circle at var(--lx, 50%) var(--ly, 30%),
-      rgba(255, 209, 138, 0.06), transparent 70%),
+      rgba(255, 209, 138, 0.06) 0%, rgba(255, 209, 138, 0.03) 35%,
+      rgba(255, 209, 138, 0.012) 55%, transparent 70%),
     radial-gradient(560px circle at var(--lx, 50%) var(--ly, 30%),
-      rgba(255, 196, 110, 0.03), transparent 72%);
+      rgba(255, 196, 110, 0.03) 0%, rgba(255, 196, 110, 0.015) 40%,
+      transparent 72%);
   mix-blend-mode: screen;
-}
-
-#ck-lantern.ck-lit {
-  opacity: 1;
-  animation: ck-flicker 4.5s ease-in-out infinite;
-}
-
-/* The glow itself is only ~6% alpha, so the flicker range has to be wide
-   enough to survive the multiplication — anything narrower than ~25% of
-   overlay opacity reads as perfectly steady light. */
-@keyframes ck-flicker {
-  0%, 100% { opacity: 1; }
-  11%      { opacity: 0.84; }
-  24%      { opacity: 0.98; }
-  38%      { opacity: 0.76; }
-  52%      { opacity: 0.94; }
-  67%      { opacity: 0.8; }
-  81%      { opacity: 1; }
-  90%      { opacity: 0.88; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #ck-lantern.ck-lit { animation: none; }
 }
 
 /* No lantern on touch devices — there is no cursor to follow */

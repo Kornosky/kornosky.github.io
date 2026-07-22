@@ -15,6 +15,7 @@ author: Christopher Kornosky
 
 navbar-links:
   Projects: "/#projects"
+  Games: "/#games"
   About Me: "aboutme"
   Contact: "/#contact"
 
@@ -61,7 +62,7 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: Chris Kornosky — software engineer focused on Python, AI, and ML engineering
+rss-description: "Chris Kornosky: software engineer focused on Python, AI, and ML engineering"
 
 # --- General options --- #
 
@@ -119,6 +120,7 @@ site-css:
 # If you have common JavaScript files that should be included in every page, list them here
 site-js:
   - "/assets/js/lantern.js"
+  - "/assets/js/rotate-words.js"
 
 # --- Web Analytics Section --- #
 

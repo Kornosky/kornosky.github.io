@@ -1,6 +1,9 @@
 // Lantern cursor glow: a warm light that trails the mouse with a little lag,
-// like carrying a lantern across the page. Pure CSS-variable updates on a
-// fixed overlay, so it costs one composited layer and no layout work.
+// like carrying a lantern across the page. Position, fade-in, and the candle
+// flicker are all driven here (not CSS animations) so the flicker works even
+// when the OS reduced-motion setting disables CSS keyframes. The flicker is
+// a gentle luminance sway of an already-faint glow, well below any
+// motion-sensitivity threshold.
 (function () {
   if (window.matchMedia && window.matchMedia('(hover: none)').matches) return;
 
@@ -8,45 +11,62 @@
   lantern.id = 'ck-lantern';
   lantern.setAttribute('aria-hidden', 'true');
 
-  var x = window.innerWidth / 2;
-  var y = window.innerHeight / 3;
-  var targetX = x;
-  var targetY = y;
-  var lit = false;
+  var x = 0;
+  var y = 0;
+  var targetX = 0;
+  var targetY = 0;
+  var fade = 0;        // 0..1, eased toward fadeTarget
+  var fadeTarget = 0;
   var raf = null;
+  var last = null;
 
-  function frame() {
-    // Ease toward the cursor: the lag is what sells the lantern-swing feel.
+  // Layered incommensurate sines approximate the aperiodic sway of a flame
+  // without the popcorn jitter that Math.random would give.
+  function flicker(t) {
+    var s = Math.sin(t * 1.1) * 0.5
+          + Math.sin(t * 2.3 + 1.7) * 0.3
+          + Math.sin(t * 4.7 + 0.5) * 0.2;
+    return 0.85 + 0.15 * s; // 0.70 .. 1.0
+  }
+
+  function frame(now) {
+    if (last === null) last = now;
+    var dt = Math.min((now - last) / 1000, 0.1);
+    last = now;
+
     x += (targetX - x) * 0.12;
     y += (targetY - y) * 0.12;
+    fade += (fadeTarget - fade) * Math.min(1, dt * 3);
+
     lantern.style.setProperty('--lx', x + 'px');
     lantern.style.setProperty('--ly', y + 'px');
-    if (Math.abs(targetX - x) > 0.2 || Math.abs(targetY - y) > 0.2) {
-      raf = requestAnimationFrame(frame);
-    } else {
+    lantern.style.opacity = (fade * flicker(now / 1000)).toFixed(3);
+
+    if (fadeTarget === 0 && fade < 0.01) {
+      lantern.style.opacity = '0';
       raf = null;
+      last = null;
+      return;
     }
+    raf = requestAnimationFrame(frame);
   }
 
   document.addEventListener('mousemove', function (e) {
     targetX = e.clientX;
     targetY = e.clientY;
-    if (!lit) {
-      lit = true;
+    if (fadeTarget === 0) {
+      fadeTarget = 1;
+      // Light the lantern at the cursor, not wherever it last went out.
       x = targetX;
       y = targetY;
-      // Place the light before the first animation frame so it never
-      // fades in at a stale position.
       lantern.style.setProperty('--lx', x + 'px');
       lantern.style.setProperty('--ly', y + 'px');
-      lantern.classList.add('ck-lit');
     }
     if (!raf) raf = requestAnimationFrame(frame);
   });
 
   document.addEventListener('mouseleave', function () {
-    lantern.classList.remove('ck-lit');
-    lit = false;
+    fadeTarget = 0;
   });
 
   if (document.body) {
