@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: My Website
+title: Chris Kornosky
 
 # Your name to show in the footer
 author: Christopher Kornosky
@@ -14,12 +14,9 @@ author: Christopher Kornosky
 # --- List of links in the navigation bar --- #
 
 navbar-links:
+  Projects: "/#projects"
   About Me: "aboutme"
-  About Portfolio:
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Contact: "/#contact"
 
 # --- Logo --- #
 
@@ -40,13 +37,13 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
-  facebook: deanattali
+  email: "christopher.kornosky@gmail.com"
   github: Kornosky
- # twitter: daattali
-  youtube: c/daattali
+#  facebook: yourname
+#  twitter: yourname
+#  youtube: yourname
 #  reddit: yourname
-  linkedin: daattali
+#  linkedin: yourname
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -64,7 +61,7 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: Chris Kornosky — software engineer focused on Python, AI, and ML engineering
 
 # --- General options --- #
 
@@ -94,16 +91,16 @@ feed_show_tags: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
-page-col: "#121212"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#EAEAEA"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
+navbar-col: "#101116"
+navbar-text-col: "#e9e9ec"
+navbar-border-col: "#26262c"
+page-col: "#15161c"
+text-col: "#e7e7ec"
+link-col: "#97a3e2"
+hover-col: "#c3cbf0"
+footer-col: "#101116"
+footer-text-col: "#9d9da8"
+footer-link-col: "#e9e9ec"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -116,12 +113,12 @@ footer-link-col: "#404040"
 #mobile-theme-col: "#0085A1"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/custom-styles.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
-#site-js:
-#  - "/assets/js/custom-script.js"
+site-js:
+  - "/assets/js/lantern.js"
 
 # --- Web Analytics Section --- #
 
@@ -185,7 +182,7 @@ date_format: "%B %-d, %Y"
 # --- You don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/New_York"
+timezone: "America/Rainy_River"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/

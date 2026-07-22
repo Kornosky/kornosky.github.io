@@ -1,21 +1,33 @@
 ---
 layout: page
 title: About me
-subtitle: Game Engineer | Game Designer | Technical Artist
-
+subtitle: Software Engineer · Python · AI/ML
 ---
 
-### My Goals
+### Hi, I'm Chris
 
-I'm a passionate game developer and artist that strives to create something new and unique for the world to see. I push my game design skills by insuring that every decision is solidified by player testing and sufficient research. When I'm not coding or planning on paper how to manage the flow of data for my project, I immerse myself in the artistic passion of others whilst making sure I stretch my own art-muscles on a daily basis. 
+I'm a software engineer and Python technical director. My background is in building the tools that
+creative and engineering teams rely on every day — render-farm APIs, version-control automations,
+and pipelines that turn tedious manual work into a button press.
 
+That work taught me the things I care most about as an engineer: reliability, developer experience,
+and writing code that the next person can actually read. It also made me fluent in the full life of
+a piece of software — from a quick script that solves today's problem to a service with an API,
+tests, and users who depend on it.
 
+### Where I'm headed
 
-### My Education
+I'm now focused on **software engineering (Python), AI engineering, and ML engineering** roles.
+I'm especially interested in the space where solid engineering meets modern AI — building the
+tooling, integrations, and infrastructure that make machine learning useful in production.
 
-I am currently a student at TAMU University with an expected graduation in Fall 2020 (if everything goes well) and planning on continuing onto the Visualization Grad Program at TAMU.. 
+### Background
 
-### Closing Remarks
+I studied at Texas A&amp;M University, where I started out in game development and technical art
+before gravitating toward the pipeline and tooling side of things — which is where I found that
+building for other developers is the work I enjoy most.
 
+### Get in touch
 
-I hope you enjoy looking through my creative works and make sure to contact me for any questions, concerns, or if you just want to chat. 
+Take a look at [my projects](/#projects), browse [my GitHub](https://github.com/Kornosky), or just
+[send me an email](mailto:christopher.kornosky@gmail.com) — I'm always happy to chat.

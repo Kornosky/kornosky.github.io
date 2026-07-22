@@ -1,0 +1,576 @@
+/* ==========================================================================
+   Custom design system for kornosky.site
+   Loaded after the Beautiful Jekyll theme CSS, so rules here win.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Grenze+Gotisch:wght@500;600;700&family=Cinzel:wght@500;600&display=swap');
+
+:root {
+  --ck-bg-dark: #101116;
+  --ck-bg-dark-2: #17181f;
+  --ck-bg-page: #15161c;
+  --ck-surface: #1c1d25;
+  --ck-ink: #e7e7ec;
+  --ck-ink-soft: #a3a3ae;
+  --ck-ink-inverse: #e9e9ec;
+  --ck-ink-inverse-soft: #9d9da8;
+  --ck-accent: #5868c4;
+  --ck-accent-bright: #97a3e2;
+  --ck-accent-strong: #47549e;
+  --ck-accent-glow: rgba(88, 104, 196, 0.32);
+  --ck-gold: #c2a468;
+  --ck-border: #2b2c36;
+  --ck-radius: 14px;
+  --ck-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.25);
+  --ck-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.3), 0 16px 40px rgba(0, 0, 0, 0.45);
+  --ck-font-sans: 'Inter', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ck-font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --ck-font-display: 'Grenze Gotisch', 'Cinzel', 'Inter', serif;
+}
+
+/* --- Global typography ------------------------------------------------- */
+
+body {
+  font-family: var(--ck-font-sans);
+  color: var(--ck-ink);
+  background-color: var(--ck-bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ck-font-display);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ck-ink);
+}
+
+a {
+  color: var(--ck-accent-bright);
+}
+
+a:hover, a:focus {
+  color: #c3cbf0;
+  text-decoration: none;
+}
+
+/* --- Navbar ------------------------------------------------------------ */
+
+.navbar-custom {
+  font-family: var(--ck-font-sans);
+  background: rgba(19, 20, 25, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  color: var(--ck-ink-inverse);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.navbar-custom .navbar-brand {
+  font-family: var(--ck-font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: var(--ck-ink-inverse-soft);
+  font-size: 0.95rem;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link:focus {
+  color: #ffffff;
+}
+
+.navbar-custom .navbar-toggler {
+  color: var(--ck-ink-inverse);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-custom .avatar-container .avatar-img-border {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 767px) {
+  .navbar-custom .navbar-collapse {
+    background: rgba(19, 20, 25, 0.97);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  .navbar-custom .navbar-nav .nav-link {
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* --- Footer ------------------------------------------------------------ */
+
+footer {
+  font-family: var(--ck-font-sans);
+  background: var(--ck-bg-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--ck-ink-inverse-soft);
+}
+
+footer a {
+  color: var(--ck-ink-inverse);
+}
+
+footer a:hover {
+  color: var(--ck-gold);
+}
+
+footer .footer-links a,
+footer p.copyright,
+footer .theme-by {
+  color: var(--ck-ink-inverse-soft);
+}
+
+/* --- Default page headers (About, posts, tags) ------------------------- */
+
+.intro-header .page-heading h1,
+.intro-header .post-heading h1 {
+  font-family: var(--ck-font-display);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.intro-header .page-heading .page-subheading,
+.intro-header .post-heading .post-subheading {
+  font-family: var(--ck-font-sans);
+  color: var(--ck-ink-soft);
+}
+
+/* ==========================================================================
+   Homepage components (ck-*)
+   ========================================================================== */
+
+.ck-section {
+  padding: 5.5rem 1.5rem;
+}
+
+.ck-container {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.ck-eyebrow {
+  font-family: var(--ck-font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ck-accent);
+  margin-bottom: 0.75rem;
+}
+
+.ck-section-title {
+  font-family: var(--ck-font-display);
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.75rem;
+}
+
+.ck-section-lead {
+  font-size: 1.1rem;
+  color: var(--ck-ink-soft);
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+/* --- Hero -------------------------------------------------------------- */
+
+.ck-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 55% 60% at 18% 8%, rgba(88, 104, 196, 0.22), transparent 60%),
+    radial-gradient(ellipse 45% 55% at 85% 90%, rgba(185, 154, 95, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--ck-bg-dark) 0%, var(--ck-bg-dark-2) 100%);
+  color: var(--ck-ink-inverse);
+  padding: 9.5rem 1.5rem 7rem;
+  margin-top: -1px;
+}
+
+.ck-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 75%);
+  pointer-events: none;
+}
+
+.ck-hero .ck-container {
+  position: relative;
+}
+
+.ck-hero-eyebrow {
+  font-family: var(--ck-font-mono);
+  font-size: 0.9rem;
+  color: var(--ck-gold);
+  margin-bottom: 1.25rem;
+}
+
+.ck-hero h1 {
+  font-family: var(--ck-font-display);
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1.05;
+  color: #ffffff;
+  margin: 0 0 1.25rem;
+}
+
+.ck-hero h1 .ck-accent {
+  background: linear-gradient(92deg, #8d9ade 0%, #d3b477 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.ck-hero-sub {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--ck-ink-inverse-soft);
+  max-width: 40rem;
+  margin-bottom: 2.25rem;
+}
+
+.ck-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 3rem;
+}
+
+.ck-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--ck-font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.ck-btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.ck-btn-primary {
+  background: var(--ck-accent);
+  color: #ffffff;
+  box-shadow: 0 8px 24px var(--ck-accent-glow);
+}
+
+.ck-btn-primary:hover, .ck-btn-primary:focus {
+  background: var(--ck-accent-strong);
+  color: #ffffff;
+  box-shadow: 0 10px 28px var(--ck-accent-glow);
+}
+
+.ck-btn-ghost {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: var(--ck-ink-inverse);
+}
+
+.ck-btn-ghost:hover, .ck-btn-ghost:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+/* Light-context button (contact section) */
+.ck-btn-dark {
+  background: var(--ck-bg-dark);
+  color: #ffffff;
+}
+
+.ck-btn-dark:hover, .ck-btn-dark:focus {
+  background: #23242c;
+  color: #ffffff;
+}
+
+.ck-btn-outline {
+  border-color: #3a3b46;
+  background: var(--ck-surface);
+  color: var(--ck-ink);
+}
+
+.ck-btn-outline:hover, .ck-btn-outline:focus {
+  border-color: var(--ck-accent);
+  color: var(--ck-accent-bright);
+}
+
+.ck-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.ck-chip {
+  font-family: var(--ck-font-mono);
+  font-size: 0.82rem;
+  color: var(--ck-ink-inverse-soft);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+}
+
+/* --- Focus cards (what I do) ------------------------------------------- */
+
+.ck-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.ck-card {
+  background: var(--ck-surface);
+  border: 1px solid var(--ck-border);
+  border-radius: var(--ck-radius);
+  padding: 1.8rem;
+  box-shadow: var(--ck-shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.ck-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ck-shadow-hover);
+  border-color: #3d3e4a;
+}
+
+.ck-card-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(88, 104, 196, 0.22), rgba(194, 164, 104, 0.2));
+  color: var(--ck-accent-bright);
+  font-size: 1.25rem;
+  margin-bottom: 1.1rem;
+}
+
+.ck-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+}
+
+.ck-card p {
+  font-size: 0.97rem;
+  line-height: 1.65;
+  color: var(--ck-ink-soft);
+  margin: 0;
+}
+
+/* --- Projects ---------------------------------------------------------- */
+
+.ck-projects {
+  background: var(--ck-bg-dark);
+  border-top: 1px solid var(--ck-border);
+  border-bottom: 1px solid var(--ck-border);
+}
+
+.ck-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+}
+
+.ck-project {
+  display: flex;
+  flex-direction: column;
+  background: var(--ck-surface);
+  border: 1px solid var(--ck-border);
+  border-radius: var(--ck-radius);
+  padding: 1.7rem 1.8rem;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+a.ck-project:hover, a.ck-project:focus {
+  transform: translateY(-4px);
+  box-shadow: var(--ck-shadow-hover);
+  border-color: var(--ck-accent);
+  text-decoration: none;
+  color: var(--ck-ink);
+}
+
+.ck-project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.ck-project-top .fa-github,
+.ck-project-top .ck-arrow {
+  color: var(--ck-ink-soft);
+  font-size: 1.2rem;
+}
+
+a.ck-project:hover .ck-arrow {
+  color: var(--ck-accent-bright);
+}
+
+.ck-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--ck-font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ck-ink-soft);
+}
+
+.ck-lang::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ck-lang-col, var(--ck-accent));
+}
+
+.ck-lang-python { --ck-lang-col: #3776ab; }
+.ck-lang-csharp { --ck-lang-col: #8b5cf6; }
+.ck-lang-js     { --ck-lang-col: #eab308; }
+.ck-lang-cpp    { --ck-lang-col: #ec4899; }
+
+.ck-project h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.55rem;
+}
+
+.ck-project p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ck-ink-soft);
+  margin: 0;
+}
+
+.ck-projects-more {
+  margin-top: 2.2rem;
+  text-align: center;
+}
+
+/* --- Toolbox ----------------------------------------------------------- */
+
+.ck-toolbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.ck-tool {
+  font-family: var(--ck-font-mono);
+  font-size: 0.88rem;
+  color: var(--ck-ink);
+  background: var(--ck-surface);
+  border: 1px solid #33343f;
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  box-shadow: var(--ck-shadow);
+}
+
+/* --- Contact ----------------------------------------------------------- */
+
+.ck-contact {
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 110%, rgba(88, 104, 196, 0.22), transparent 65%),
+    linear-gradient(180deg, var(--ck-bg-dark-2) 0%, var(--ck-bg-dark) 100%);
+  color: var(--ck-ink-inverse);
+  text-align: center;
+}
+
+.ck-contact .ck-section-title {
+  color: #ffffff;
+}
+
+.ck-contact .ck-section-lead {
+  color: var(--ck-ink-inverse-soft);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ck-contact .ck-hero-actions {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+/* --- Lantern cursor glow ----------------------------------------------- */
+
+#ck-lantern {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  background:
+    radial-gradient(200px circle at var(--lx, 50%) var(--ly, 30%),
+      rgba(255, 209, 138, 0.06), transparent 70%),
+    radial-gradient(560px circle at var(--lx, 50%) var(--ly, 30%),
+      rgba(255, 196, 110, 0.03), transparent 72%);
+  mix-blend-mode: screen;
+}
+
+#ck-lantern.ck-lit {
+  opacity: 1;
+  animation: ck-flicker 5.5s ease-in-out infinite;
+}
+
+@keyframes ck-flicker {
+  0%, 100% { opacity: 1; }
+  13%      { opacity: 0.97; }
+  29%      { opacity: 1; }
+  41%      { opacity: 0.955; }
+  58%      { opacity: 0.99; }
+  74%      { opacity: 0.965; }
+  88%      { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ck-lantern.ck-lit { animation: none; }
+}
+
+/* No lantern on touch devices — there is no cursor to follow */
+@media (hover: none) {
+  #ck-lantern { display: none; }
+}
+
+/* --- Responsive -------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .ck-grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 680px) {
+  .ck-section { padding: 3.5rem 1.25rem; }
+  .ck-hero { padding: 7.5rem 1.25rem 4.5rem; }
+  .ck-grid-3, .ck-grid-2 { grid-template-columns: 1fr; }
+  .ck-section-title { font-size: 1.6rem; }
+}
