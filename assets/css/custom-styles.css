@@ -200,14 +200,14 @@ footer .theme-by {
   margin-top: -1px;
 }
 
+/* Running-bond stone blocks: a 128x88 tile holding two offset brick rows,
+   drawn as faint mortar lines so the lantern light can catch the wall. */
 .ck-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 44px 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='88'%3E%3Cg stroke='rgba(255,255,255,0.05)' stroke-width='2' fill='none'%3E%3Cline x1='0' y1='1' x2='128' y2='1'/%3E%3Cline x1='0' y1='45' x2='128' y2='45'/%3E%3Cline x1='1' y1='0' x2='1' y2='44'/%3E%3Cline x1='65' y1='44' x2='65' y2='88'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 128px 88px;
   mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 75%);
   pointer-events: none;
@@ -499,11 +499,29 @@ a.ck-project:hover .ck-arrow {
 /* --- Contact ----------------------------------------------------------- */
 
 .ck-contact {
+  position: relative;
+  overflow: hidden;
   background:
     radial-gradient(ellipse 60% 80% at 50% 110%, rgba(88, 104, 196, 0.22), transparent 65%),
     linear-gradient(180deg, var(--ck-bg-dark-2) 0%, var(--ck-bg-dark) 100%);
   color: var(--ck-ink-inverse);
   text-align: center;
+}
+
+/* Same stone-block wall as the hero, fading up from the bottom */
+.ck-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='88'%3E%3Cg stroke='rgba(255,255,255,0.05)' stroke-width='2' fill='none'%3E%3Cline x1='0' y1='1' x2='128' y2='1'/%3E%3Cline x1='0' y1='45' x2='128' y2='45'/%3E%3Cline x1='1' y1='0' x2='1' y2='44'/%3E%3Cline x1='65' y1='44' x2='65' y2='88'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 128px 88px;
+  mask-image: radial-gradient(ellipse 85% 80% at 50% 90%, #000 30%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 80% at 50% 90%, #000 30%, transparent 78%);
+  pointer-events: none;
+}
+
+.ck-contact .ck-container {
+  position: relative;
 }
 
 .ck-contact .ck-section-title {
@@ -540,17 +558,21 @@ a.ck-project:hover .ck-arrow {
 
 #ck-lantern.ck-lit {
   opacity: 1;
-  animation: ck-flicker 5.5s ease-in-out infinite;
+  animation: ck-flicker 4.5s ease-in-out infinite;
 }
 
+/* The glow itself is only ~6% alpha, so the flicker range has to be wide
+   enough to survive the multiplication — anything narrower than ~25% of
+   overlay opacity reads as perfectly steady light. */
 @keyframes ck-flicker {
   0%, 100% { opacity: 1; }
-  13%      { opacity: 0.97; }
-  29%      { opacity: 1; }
-  41%      { opacity: 0.955; }
-  58%      { opacity: 0.99; }
-  74%      { opacity: 0.965; }
-  88%      { opacity: 1; }
+  11%      { opacity: 0.84; }
+  24%      { opacity: 0.98; }
+  38%      { opacity: 0.76; }
+  52%      { opacity: 0.94; }
+  67%      { opacity: 0.8; }
+  81%      { opacity: 1; }
+  90%      { opacity: 0.88; }
 }
 
 @media (prefers-reduced-motion: reduce) {
