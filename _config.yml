@@ -14,6 +14,7 @@ author: Christopher Kornosky
 # --- List of links in the navigation bar --- #
 
 navbar-links:
+  Experience: "/#experience"
   Projects: "/#projects"
   Games: "/#games"
   About Me: "aboutme"
@@ -40,11 +41,11 @@ round-avatar: true
 social-network-links:
   email: "christopher.kornosky@gmail.com"
   github: Kornosky
+  linkedin: christopherkornosky
 #  facebook: yourname
 #  twitter: yourname
 #  youtube: yourname
 #  reddit: yourname
-#  linkedin: yourname
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78

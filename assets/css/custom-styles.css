@@ -407,6 +407,56 @@ footer .theme-by {
   margin: 0;
 }
 
+/* --- Experience timeline ----------------------------------------------- */
+
+.ck-timeline {
+  position: relative;
+  margin-top: 2.5rem;
+  padding-left: 2rem;
+  border-left: 2px solid var(--ck-border);
+}
+
+.ck-timeline-item {
+  position: relative;
+  padding-bottom: 2.2rem;
+}
+
+.ck-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.ck-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: calc(-2rem - 7px);
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ck-gold);
+  box-shadow: 0 0 10px rgba(194, 164, 104, 0.5);
+}
+
+.ck-timeline-role {
+  font-size: 1.25rem;
+  margin: 0 0 0.3rem;
+}
+
+.ck-timeline-meta {
+  font-family: var(--ck-font-mono);
+  font-size: 0.82rem;
+  color: var(--ck-ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+.ck-timeline-item p {
+  font-size: 0.97rem;
+  line-height: 1.65;
+  color: var(--ck-ink-soft);
+  margin: 0;
+  max-width: 44rem;
+}
+
 /* --- Projects ---------------------------------------------------------- */
 
 .ck-projects {
