@@ -1,0 +1,41 @@
+{% if site.clarity %}
+<!-- Microsoft Clarity: session replay, click/scroll heatmaps, rage-click and
+     dead-click detection. Free, unlimited sessions. Sets cookies. -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "{{ site.clarity }}");
+</script>
+<script>
+  // Everything else client-side JS can see, attached to the session as custom
+  // tags so it is filterable in the Clarity dashboard. This is hardware and
+  // locale detail the browser exposes to any script; none of it names a person.
+  window.addEventListener('load', function () {
+    if (typeof window.clarity !== 'function') return;
+    var tag = function (k, v) {
+      if (v !== undefined && v !== null && v !== '') {
+        try { window.clarity('set', k, String(v)); } catch (e) {}
+      }
+    };
+    try {
+      tag('timezone', Intl.DateTimeFormat().resolvedOptions().timeZone);
+      tag('languages', (navigator.languages || []).join(','));
+      tag('cpu_cores', navigator.hardwareConcurrency);
+      tag('device_memory_gb', navigator.deviceMemory);
+      tag('viewport', window.innerWidth + 'x' + window.innerHeight);
+      tag('screen', screen.width + 'x' + screen.height + ' @' + window.devicePixelRatio + 'x');
+      if (navigator.connection) tag('connection', navigator.connection.effectiveType);
+      var canvas = document.createElement('canvas');
+      var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      if (gl) {
+        var dbg = gl.getExtension('WEBGL_debug_renderer_info');
+        if (dbg) tag('gpu', gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL));
+      }
+    } catch (e) {
+      // Best effort only; never let telemetry break the page.
+    }
+  });
+</script>
+{% endif %}

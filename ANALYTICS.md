@@ -3,41 +3,58 @@
 Notes on what this site tracks, how to turn it on, and how to get useful signal
 out of it during a job search. Not published; excluded from the Jekyll build.
 
-## Turning it on
+## The stack
 
-1. Sign up at <https://www.goatcounter.com> (free for personal sites) and pick a
-   site code, e.g. `kornosky`.
-2. Uncomment `goatcounter:` in `_config.yml` and set it to that code.
-3. Push. The dashboard is at `https://YOURCODE.goatcounter.com`.
+Three independent tools, each behind its own key in `_config.yml`. Nothing runs
+until its key is set, and any of them can be disabled by commenting the key out.
 
-Nothing is tracked until that key is set. To switch to Google Analytics 4
-instead, set `gtag:` in `_config.yml`; the theme already supports it. GA4
-collects more but needs a cookie-consent banner in the EU/UK and is blocked by
-most ad blockers, which disproportionately hits a technical audience.
+| Tool | Key | What it gives you | Cookies |
+| --- | --- | --- | --- |
+| GoatCounter | `goatcounter` | Pageviews, referrers, campaign tags, country | No |
+| Microsoft Clarity | `clarity` | Session replay, heatmaps, device tags | Yes |
+| Google Analytics 4 | `gtag` | Sessions, engagement time, events, geo, funnels | Yes |
 
-## What you can and cannot see
+Sign-up links are in the `_config.yml` comments. Each needs an account and a
+site ID pasted into the config.
 
-Available per visit:
+## What you get
 
-- Page viewed, date and time
-- Referrer (which site or which application link sent them)
-- Campaign tags from the URL (see below)
-- Country, browser, OS, screen size
+**GoatCounter** — the cookieless baseline. Cleanest view of referrers and
+campaign tags, which is the signal that matters most (see tagging, below).
 
-Not available, by design or by platform:
+**Clarity** — the visual layer:
 
-- Names, emails, employers, or LinkedIn profiles of visitors
-- IP addresses. GoatCounter hashes IP + user agent with a rotating salt purely
-  to count unique visits, and never stores the address.
-- Server logs. GitHub Pages does not expose them, so client-side JavaScript is
-  the only source of data, and anyone running an ad blocker will not appear at
-  all. Treat the numbers as a floor, not a census.
+- Session replay: cursor movement, clicks, scrolling, played back as video
+- Click and scroll heatmaps per page
+- Rage clicks, dead clicks, excessive scrolling, quick-backs
+- Custom device tags set in `_includes/clarity.html`: timezone, languages,
+  CPU cores, device memory, viewport, screen and pixel ratio, connection type,
+  and GPU model string
 
-## Tagging links (the part that actually matters)
+The site has no forms or inputs anywhere, so replay captures pointer and scroll
+behaviour only. There is no text entry on the site for it to record.
 
-Referrer alone will not tell you much, because clicks from PDFs, email, and
-native apps usually arrive with no referrer at all. Tag the URL instead. Every
-place you publish the site link, give it its own tag:
+**GA4** — the numbers layer: sessions, engagement time, scroll and outbound
+click events, city-level geography, and returning-visitor identification.
+
+## What is still out of reach
+
+No client-side tool gets a name, email, or employer from a cold visitor. IP
+enrichment services (Clearbit, RB2B) resolve corporate networks to a company
+name at best, and residential ISPs to nothing.
+
+Also worth knowing:
+
+- GitHub Pages exposes no server logs. Client-side JavaScript is the only
+  source, so ad-blocker users never appear at all. Clarity and GA4 are on more
+  blocklists than GoatCounter. Treat every number as a floor.
+- The only reliable way to know a *specific person* visited is a uniquely
+  tagged link you sent them. That is identity by construction, not detection.
+
+## Tagging links (the highest-value part)
+
+Clicks from PDFs, email, and native apps arrive with no referrer, so tag the URL
+instead. Every place you publish the link, give it its own tag:
 
 | Where the link lives | URL to use |
 | --- | --- |
@@ -47,23 +64,19 @@ place you publish the site link, give it its own tag:
 | Résumé PDF | `https://kornosky.site/?utm_source=resume` |
 | A specific application | `https://kornosky.site/?utm_source=resume&utm_campaign=affirm-mle2` |
 
-These show up under Campaigns in GoatCounter, and work the same in GA4 or
-Plausible if you ever switch.
+These register as campaigns in all three tools. A visit tagged `affirm-mle2` two
+days after applying means someone on that team opened the site, which is real
+signal about whether an application is live. Log the tag you used in
+`job_search_tracker.xlsx` next to each application so the dashboard reads
+clearly later.
 
-Per-application tags are the highest-value trick here: a visit tagged
-`affirm-mle2` two days after applying means someone on that team opened your
-site, which is a real signal about whether an application is live. Keep the
-campaign tag short and lowercase, since it is visible in the address bar.
+## Notes
 
-Worth logging the tag you used in `job_search_tracker.xlsx` alongside each
-application so the dashboard is readable later.
+Clarity and GA4 both set cookies, which is what triggers consent requirements in
+the EU and UK. Traffic here is expected to be US-based, and the site has no
+forms, no login, and no commercial activity.
 
-## Deliberately not set up
-
-Visitor-deanonymization services (RB2B, Clearbit Reveal, Warmly and similar)
-claim to attach a name and LinkedIn profile to individual visitors. They are not
-wired up here, for practical reasons as much as legal ones: they work by
-matching IPs against data-broker profiles, so residential ISPs resolve to
-nothing and the best case is "someone at Company X" from a corporate IP. That is
-the same thing a campaign tag tells you, without processing third-party personal
-data on a personal site.
+Fingerprinting libraries (FingerprintJS and similar) are deliberately not
+included. They exist to defeat incognito mode and cache clearing, which is
+useful for fraud detection and paywalls, and buys nothing on a portfolio that
+Clarity's device tags do not already cover.

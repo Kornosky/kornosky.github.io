@@ -131,8 +131,14 @@ site-js:
 # links so you can tell which application drove a visit.
 goatcounter: "kornosky"
 
-# Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+# Microsoft Clarity project ID: session replay, click and scroll heatmaps,
+# rage-click detection, plus the device tags set in _includes/clarity.html.
+# Free and unlimited. Sign up at https://clarity.microsoft.com
+#clarity: "abcd1234ef"
+
+# Fill in your Google Analytics gtag.js ID to track your website using gtag.
+# Format: G-XXXXXXXXXX. Sign up at https://analytics.google.com
+#gtag: "G-XXXXXXXXXX"
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
 #google_analytics: ""
