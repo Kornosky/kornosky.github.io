@@ -129,7 +129,7 @@ site-js:
 # https://www.goatcounter.com and put your site code here (the "CODE" part of
 # CODE.goatcounter.com). See ANALYTICS.md for what it reports and how to tag
 # links so you can tell which application drove a visit.
-#goatcounter: "kornosky"
+goatcounter: "kornosky"
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
 #gtag: ""
