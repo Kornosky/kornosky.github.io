@@ -125,6 +125,12 @@ site-js:
 
 # --- Web Analytics Section --- #
 
+# GoatCounter: cookieless analytics, free for personal sites. Sign up at
+# https://www.goatcounter.com and put your site code here (the "CODE" part of
+# CODE.goatcounter.com). See ANALYTICS.md for what it reports and how to tag
+# links so you can tell which application drove a visit.
+#goatcounter: "kornosky"
+
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
 #gtag: ""
 
@@ -212,6 +218,7 @@ defaults:
 
 # Exclude these files from production site
 exclude:
+  - ANALYTICS.md
   - CHANGELOG.md
   - CNAME
   - Gemfile
