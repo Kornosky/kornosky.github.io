@@ -1,5 +1,5 @@
-// Rotating adjective in the hero headline: "I build <practical> tools with
-// Python." The wrapper's width is animated alongside the word swap so the
+// Rotating adjective in the hero headline: "I keep <distributed> systems
+// running." The wrapper's width is animated alongside the word swap so the
 // rest of the line slides smoothly instead of snapping when word lengths
 // differ. Uses CSS transitions (set in custom-styles.css), which are not
 // affected by the OS reduced-motion setting the way keyframe animations
@@ -8,7 +8,7 @@
   var el = document.getElementById('ck-rotate');
   if (!el) return;
 
-  var words = ['practical', 'quick', 'robust', 'intelligent', 'reliable', 'scalable', 'elegant'];
+  var words = ['distributed', 'production', 'resilient', 'large-scale', 'critical', 'complex'];
   var index = 0;
 
   var inner = document.createElement('span');
