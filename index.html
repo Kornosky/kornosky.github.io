@@ -1,18 +1,19 @@
 ---
 layout: base
-title: Chris Kornosky · Software Engineer
-share-description: "Software engineer and Python technical director focused on Python, AI, and ML engineering."
+title: Chris Kornosky · DevOps & Platform Engineer
+share-description: "DevOps, SRE, and platform engineer. 4+ years operating distributed compute in production: a 500+ node compute fleet, job scheduling, CI/CD, and the tooling around it."
 ---
 
 <!-- ===== Hero ===== -->
 <section class="ck-hero">
   <div class="ck-container">
-    <div class="ck-hero-eyebrow">// chris kornosky · software · ai · ml</div>
-    <h1>I build <span class="ck-rotate" id="ck-rotate">practical</span> tools<br>with <span class="ck-accent">Python</span>.</h1>
+    <div class="ck-hero-eyebrow">// chris kornosky · devops · sre · platform</div>
+    <h1>I keep <span class="ck-rotate" id="ck-rotate">distributed</span> systems<br><span class="ck-accent">running</span>.</h1>
     <p class="ck-hero-sub">
-      Pipeline technical director with 4+ years building and operating large-scale distributed
-      compute for production VFX. I write the Python tooling and automation that keep studios
-      shipping, and I'm aiming that experience at MLOps and AI engineering.
+      Pipeline technical director with 4+ years operating large-scale distributed compute in
+      production. I run a 500+ node compute fleet, own the job scheduler and the on-call that comes
+      with it, and build the platform tooling underneath. Now targeting DevOps, SRE, and platform
+      engineering.
     </p>
     <div class="ck-hero-actions">
       <a class="ck-btn ck-btn-primary" href="#projects">View my work <i class="fas fa-arrow-down"></i></a>
@@ -20,11 +21,12 @@ share-description: "Software engineer and Python technical director focused on P
       <a class="ck-btn ck-btn-ghost" href="mailto:christopher.kornosky@gmail.com"><i class="fas fa-envelope"></i> Email me</a>
     </div>
     <div class="ck-chips">
+      <span class="ck-chip">Distributed systems</span>
       <span class="ck-chip">Python</span>
-      <span class="ck-chip">MLOps</span>
-      <span class="ck-chip">Distributed compute</span>
+      <span class="ck-chip">Linux</span>
       <span class="ck-chip">CI / CD</span>
-      <span class="ck-chip">Automation</span>
+      <span class="ck-chip">Incident response</span>
+      <span class="ck-chip">Kubernetes (learning)</span>
     </div>
   </div>
 </section>
@@ -33,32 +35,33 @@ share-description: "Software engineer and Python technical director focused on P
 <section class="ck-section" id="focus">
   <div class="ck-container">
     <div class="ck-eyebrow">My oaths</div>
-    <h2 class="ck-section-title">From pipeline scripts to production services</h2>
+    <h2 class="ck-section-title">Running production, and building the platform under it</h2>
     <p class="ck-section-lead">
-      At Ingenuity Studios I build the software that other engineers and artists depend on every
-      day. That means an obsession with reliability, developer experience, and tools that quietly
-      do their job.
+      At Ingenuity Studios I keep a distributed compute fleet healthy and build the tooling every
+      other engineer and artist depends on. VFX is an unforgiving place to learn reliability: jobs
+      are expensive, deadlines are immovable, and when the farm stops, everyone stops.
     </p>
     <div class="ck-grid-3">
       <div class="ck-card">
-        <div class="ck-card-icon"><i class="fas fa-code"></i></div>
-        <h3>Software Engineering</h3>
-        <p>Python services, REST APIs, and CLIs held to production standards: Ruff, mypy, and clean,
-          tested code that the next person can actually maintain.</p>
+        <div class="ck-card-icon"><i class="fas fa-heartbeat"></i></div>
+        <h3>Site Reliability</h3>
+        <p>Owning uptime on a 500+ node fleet: job scheduling, queue prioritization, retry logic,
+          and monitoring. I wrote our on-call rotation and runbooks, so I know what it is to be the
+          person paged at 2am when production is down.</p>
       </div>
       <div class="ck-card">
-        <div class="ck-card-icon"><i class="fas fa-robot"></i></div>
-        <h3>ML &amp; AI Engineering</h3>
-        <p>Studying machine learning hands-on (PyTorch, scikit-learn) and already putting LLMs to
-          work, like stress-testing a studio-wide package-manager migration before it touched
-          production.</p>
+        <div class="ck-card-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Platform Engineering</h3>
+        <p>Building the paved road: a studio-wide package manager for reproducible environments,
+          pull-based deployment so nodes converge on the desired state themselves, and Vault for
+          secrets. Internal tooling other engineers actually want to use.</p>
       </div>
       <div class="ck-card">
         <div class="ck-card-icon"><i class="fas fa-cogs"></i></div>
-        <h3>Infrastructure &amp; Automation</h3>
-        <p>A 500+ node distributed render farm, Deadline job scheduling, and a zero-downtime
-          studio-wide Rez migration: compute infrastructure one analogy away from a GPU training
-          cluster.</p>
+        <h3>DevOps &amp; Automation</h3>
+        <p>CI/CD workflows, Python automation that deleted manual toil, Ruff and mypy gating
+          production, and Sentry for error visibility. Currently learning Kubernetes and studying
+          for the CKA.</p>
       </div>
     </div>
   </div>
@@ -73,28 +76,31 @@ share-description: "Software engineer and Python technical director focused on P
       <div class="ck-timeline-item">
         <h3 class="ck-timeline-role">Pipeline Technical Director</h3>
         <div class="ck-timeline-meta">Ingenuity Studios · Apr 2026 to present</div>
-        <p>Modernizing the studio pipeline: architected and deployed Rez as the studio-wide package
-          manager and led the cross-department migration with zero production downtime. Overhauled
-          code distribution from pushed git checkouts to a pull-based updater service, secured
-          tokens with Vault, and enforce quality with Ruff and mypy before anything reaches
+        <p>Platform work: architected and deployed Rez as the studio-wide package manager, giving
+          every department reproducible, independently versioned environments, and led the
+          cross-department migration with zero production downtime. Replaced push-based code
+          distribution with a pull-based updater service so nodes converge on the intended version
+          themselves, moved secrets behind the Vault API, and put Ruff and mypy in the path to
           production.</p>
       </div>
       <div class="ck-timeline-item">
         <h3 class="ck-timeline-role">Technical Lead, Render Operations</h3>
         <div class="ck-timeline-meta">Ingenuity Studios · Sep 2022 to Apr 2026</div>
-        <p>Ran a 500+ node distributed render farm across concurrent productions and breakneck
-          deadlines. Directed enhancements to Deadline and its ShotGrid integration, hired and led
-          a five-person render team, and built the on-call runbooks and incident-response process.
-          Shipped producer-facing tooling too: a ShotGrid priority page for watching farm jobs
-          without learning new software, and automated failure notifications routed to the right
-          producers.</p>
+        <p>Owned reliability for a 500+ node distributed render farm running concurrent
+          productions under hard deadlines. Extended Deadline, the distributed job scheduler, and
+          its ShotGrid integration: queue management, prioritization, monitoring, and retry logic.
+          Hired and led a five-person operations team, ran the weekly standups, and built the
+          on-call rotation, runbooks, and incident-response process from nothing. Added
+          observability where it was missing, including automated job-failure alerting routed to
+          the right owners and a self-service status page so producers could watch their own jobs
+          without learning new software.</p>
       </div>
       <div class="ck-timeline-item">
         <h3 class="ck-timeline-role">Technical Artist, Render Farm</h3>
         <div class="ck-timeline-meta">Ingenuity Studios · Nov 2021 to Sep 2022</div>
-        <p>Built the Python automation that cut manual farm operations and established the Render
-          Wrangler role from scratch, authoring the runbooks that became the team's operational
-          foundation.</p>
+        <p>Wrote the Python automation that replaced manual farm operations and took the toil out
+          of the daily routine. Established the Render Wrangler role from scratch and authored the
+          runbooks and documentation that became the team's operational foundation.</p>
       </div>
       <div class="ck-timeline-item">
         <h3 class="ck-timeline-role">Teaching &amp; VFX</h3>
@@ -112,7 +118,7 @@ share-description: "Software engineer and Python technical director focused on P
   <div class="ck-container">
     <div class="ck-eyebrow">From the forge</div>
     <h2 class="ck-section-title">Things I've built</h2>
-    <p class="ck-section-lead">A few projects from my GitHub: tools, services, and the occasional game.</p>
+    <p class="ck-section-lead">A few projects from my GitHub: infrastructure tooling, services, and the occasional game.</p>
     <div class="ck-grid-2">
       <a class="ck-project" href="https://github.com/Kornosky/DeadlineFlask">
         <div class="ck-project-top">
@@ -120,8 +126,8 @@ share-description: "Software engineer and Python technical director focused on P
           <i class="fas fa-arrow-right ck-arrow"></i>
         </div>
         <h3>DeadlineFlask</h3>
-        <p>A Flask REST API wrapping the MongoDB backend of Thinkbox Deadline, exposing render-farm
-          data to pipeline tools and dashboards.</p>
+        <p>A Flask REST API over the MongoDB backend of Thinkbox Deadline, exposing job and node
+          state from the render farm to internal tooling, dashboards, and monitoring.</p>
       </a>
       <a class="ck-project" href="https://github.com/Kornosky/python-web-microblog">
         <div class="ck-project-top">
@@ -218,22 +224,28 @@ share-description: "Software engineer and Python technical director focused on P
   <div class="ck-container">
     <div class="ck-eyebrow">The armoury</div>
     <h2 class="ck-section-title">Technologies I work with</h2>
+    <p class="ck-section-lead">
+      Currently going deeper on Kubernetes and studying for the CKA, with MLflow next on the list
+      for the ML-platform side.
+    </p>
     <div class="ck-toolbox">
       <span class="ck-tool">Python</span>
-      <span class="ck-tool">Rez</span>
-      <span class="ck-tool">Deadline</span>
       <span class="ck-tool">Linux</span>
+      <span class="ck-tool">Bash</span>
       <span class="ck-tool">CI / CD</span>
-      <span class="ck-tool">Docker (learning)</span>
       <span class="ck-tool">Git &amp; GitLab</span>
-      <span class="ck-tool">MongoDB &amp; PyMongo</span>
+      <span class="ck-tool">Deadline</span>
+      <span class="ck-tool">Rez</span>
+      <span class="ck-tool">Vault</span>
       <span class="ck-tool">Sentry</span>
       <span class="ck-tool">PDQ</span>
+      <span class="ck-tool">MongoDB &amp; PyMongo</span>
       <span class="ck-tool">Ruff &amp; mypy</span>
-      <span class="ck-tool">PyTorch (learning)</span>
-      <span class="ck-tool">scikit-learn</span>
-      <span class="ck-tool">NumPy &amp; pandas</span>
+      <span class="ck-tool">pytest</span>
       <span class="ck-tool">Flask &amp; REST APIs</span>
+      <span class="ck-tool">Kubernetes (learning)</span>
+      <span class="ck-tool">Docker (learning)</span>
+      <span class="ck-tool">MLflow (exploring)</span>
       <span class="ck-tool">ShotGrid / Flow</span>
       <span class="ck-tool">Houdini &amp; Maya</span>
       <span class="ck-tool">Unreal Engine</span>
@@ -247,11 +259,12 @@ share-description: "Software engineer and Python technical director focused on P
 <section class="ck-section ck-contact" id="contact">
   <div class="ck-container">
     <div class="ck-eyebrow" style="color: var(--ck-gold);">Send a raven</div>
-    <h2 class="ck-section-title">Open to MLOps, ML &amp; AI engineering roles</h2>
+    <h2 class="ck-section-title">Open to DevOps, SRE &amp; platform engineering roles</h2>
     <p class="ck-section-lead">
-      I'm looking for my next role in MLOps, ML engineering, AI engineering, or Python software
-      engineering. Based in Austin, Texas, and open to remote or hybrid. If that sounds like a fit,
-      I'd love to hear from you.
+      I'm looking for my next role in DevOps, site reliability, or platform engineering, where the
+      distributed systems and on-call experience I already have transfers directly. Based in
+      Austin, Texas, and open to remote or hybrid. If that sounds like a fit, I'd love to hear
+      from you.
     </p>
     <div class="ck-hero-actions">
       <a class="ck-btn ck-btn-primary" href="mailto:christopher.kornosky@gmail.com"><i class="fas fa-envelope"></i> christopher.kornosky@gmail.com</a>
