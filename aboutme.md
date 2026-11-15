@@ -1,57 +1,57 @@
 ---
 layout: page
 title: About me
-subtitle: MLOps & Pipeline Engineer · Austin, Texas
+subtitle: Infrastructure Engineer · Kubernetes & Distributed Compute · Austin, Texas
 ---
 
 ### Hi, I'm Chris
 
-I'm a pipeline technical director at Ingenuity Studios, where I've spent 4+ years building and
-operating the distributed compute infrastructure behind production VFX. My job is making sure the
-software that artists and engineers rely on every day quietly works: package management, job
-scheduling, deployment, and the automation in between.
+I'm a Certified Kubernetes Administrator and the Pipeline Technical Director at Ingenuity Studios,
+where I've spent 5 years building and operating the distributed compute platform behind production
+VFX. My job is making sure the infrastructure that artists and engineers rely on every day quietly
+works: scheduling, environment reproducibility, deployment, and the automation in between.
 
 ### What that has looked like
 
-I joined the render farm as a technical artist in 2021, wrote the Python automation that replaced
-manual farm operations, and established the Render Wrangler role from scratch, including the
-runbooks that became the team's operational foundation.
+I joined the render farm as a technical artist in 2021, built the automation that replaced manual
+farm operations, and established the Render Wrangler role from scratch, including the runbook of
+failures and fixes that became the team's operational foundation.
 
-As Technical Lead of Render Operations I ran a 500+ node distributed render farm across concurrent
-productions and high-priority deadlines, directing enhancements to Deadline (a distributed job
-scheduler) and its ShotGrid integration. I hired and led a five-person render team, ran the weekly
-standups, and built our on-call and incident-response process, so I know what it means to be the
-person paged when production is down. I also built the tools around the farm: a ShotGrid priority
-page that let producers watch their jobs without learning new software, automated failure
-notifications that compiled the data and routed it to the right people, an issues wiki, and the
-teaching to go with it.
+As Technical Lead of Render Operations I owned the scheduling layer of a heterogeneous fleet of
+500+ GPU/CPU nodes running thousands of concurrent batch jobs across simultaneous productions. That
+meant capacity planning, scheduler tuning, resource-aware placement, and failure triage with
+auto-retry so common failures stopped reaching users. I built ieFarm, a service layer over the
+Deadline scheduler API that turned job submission into a reproducible, versioned workflow, and I
+hired and led a five-person operations team with on-call and incident response, so I know what it
+means to be the person paged when the cluster is down.
 
-Now, as Pipeline Technical Director, I'm modernizing the studio's pipeline: I architected and
-deployed Rez as the studio-wide package manager and led the cross-department migration with zero
-production downtime. I overhauled code distribution from pushed git checkouts to a pull-based
-updater service, brought in Vault for token security, and put Ruff and mypy in front of production
-so quality is enforced before anything ships.
-
-Under most of it sat MongoDB: Deadline, our PDQ deployments, and our action system all ran on it,
-and interfacing through PyMongo taught me the unglamorous fundamentals that transfer straight to
-ML data work, like data preparation and putting indexes on the fields you actually query.
+Now, as Pipeline Technical Director, I'm modernizing how the studio builds and ships software: I
+architected Rez as the studio-wide package manager so every module is versioned and deployed
+independently, and led the cross-department migration with zero production downtime. I moved code
+distribution from pushed git checkouts to a pull-based updater service, brought in Vault for secrets,
+and gated production behind GitLab CI.
 
 ### Where I'm headed
 
-I'm focused on **MLOps, ML engineering, and AI engineering** roles. The infrastructure I run is one
-analogy away from an ML platform: a render farm is a compute cluster, Deadline is a job scheduler,
-and Rez applies the same isolation principles as conda environments. I'm actively studying the ML
-side (PyTorch, scikit-learn, NumPy, pandas, and Chip Huyen's books), and I already put LLMs to work
-as engineering partners; I used one to research and stress-test the Rez migration plan before it
-touched production.
+I'm focused on **Kubernetes platform, distributed compute, and ML infrastructure** roles. A render
+farm is a batch GPU cluster with different payloads: the problems are queueing, placement, failure
+recovery, and keeping expensive hardware busy, which are exactly the problems of AI compute.
 
-### Education
+I learn new stacks by running them. At home I operate a k3d cluster with Argo Workflows for
+DAG-orchestrated training pipelines, MLflow for experiment tracking and a model registry, and MinIO
+for S3-compatible artifact storage, plus a self-hosted GPU inference node serving local LLMs over a
+Tailscale mesh.
 
+**Languages.** Python is my production language: five years of services, automation, and scheduler
+integrations. Go is the language I'm actively learning, because it's what the Kubernetes ecosystem
+is written in and where I want to build controllers and infrastructure tooling next.
+
+### Certifications & education
+
+- **Certified Kubernetes Administrator (CKA)**, CNCF / Linux Foundation, 2026
 - **M.S. Visualization**, Arts, Entertainment & Media Management, Texas A&M University
 - **M.Des. Procedural Art & Visual Storytelling**, Victoria University of Wellington
 - **B.S. Visualization, Minor in Computer Science**, Texas A&M University
-
-Certified in VEX in Houdini and Procedural Modeling for Production in Houdini.
 
 ### Games
 
