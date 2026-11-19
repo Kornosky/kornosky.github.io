@@ -33,7 +33,7 @@ and gated production behind GitLab CI.
 
 ### Where I'm headed
 
-I'm focused on **Kubernetes platform, distributed compute, and ML infrastructure** roles. A render
+I'm focused on **platform engineering, SRE, distributed compute, and ML infrastructure** roles. A render
 farm is a batch GPU cluster with different payloads: the problems are queueing, placement, failure
 recovery, and keeping expensive hardware busy, which are exactly the problems of AI compute.
 

@@ -93,14 +93,14 @@ feed_show_tags: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#101116"
+navbar-col: "#1b1c20"
 navbar-text-col: "#e9e9ec"
 navbar-border-col: "#26262c"
-page-col: "#15161c"
+page-col: "#1f2024"
 text-col: "#e7e7ec"
 link-col: "#97a3e2"
 hover-col: "#c3cbf0"
-footer-col: "#101116"
+footer-col: "#1b1c20"
 footer-text-col: "#9d9da8"
 footer-link-col: "#e9e9ec"
 
@@ -120,7 +120,6 @@ site-css:
 
 # If you have common JavaScript files that should be included in every page, list them here
 site-js:
-  - "/assets/js/lantern.js"
   - "/assets/js/rotate-words.js"
 
 # --- Web Analytics Section --- #
