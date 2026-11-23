@@ -540,7 +540,30 @@ a.ck-project:hover .ck-arrow {
 .ck-lang-sched  { --ck-lang-col: #c2a468; }
 .ck-lang-web    { --ck-lang-col: #e31837; }
 
-.ck-project-wide { grid-column: 1 / -1; }
+.ck-project-feature {
+  margin-bottom: 1.4rem;
+  border-color: rgba(227, 24, 55, 0.35);
+}
+
+.ck-project-feature p + p {
+  margin-top: 0.7rem;
+}
+
+.ck-project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+}
+
+.ck-project-stack span {
+  font-family: var(--ck-font-mono);
+  font-size: 0.75rem;
+  color: var(--ck-ink-soft);
+  border: 1px solid var(--ck-border);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+}
 
 .ck-project h3 {
   font-size: 1.2rem;
