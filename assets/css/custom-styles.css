@@ -538,6 +538,9 @@ a.ck-project:hover .ck-arrow {
 .ck-lang-k8s    { --ck-lang-col: #326ce5; }
 .ck-lang-gpu    { --ck-lang-col: #76b900; }
 .ck-lang-sched  { --ck-lang-col: #c2a468; }
+.ck-lang-web    { --ck-lang-col: #e31837; }
+
+.ck-project-wide { grid-column: 1 / -1; }
 
 .ck-project h3 {
   font-size: 1.2rem;
